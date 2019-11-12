@@ -132,8 +132,10 @@ namespace GradeBook.GradeBooks
                     break;
             }
 
-            if (IsWeighted && studentType == StudentType.Honors || studentType == StudentType.DualEnrolled) {
-                gradeValue++;
+            if (IsWeighted) {
+                if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled) {
+                    gradeValue++;
+                }
             }
             
             return gradeValue;
